@@ -1,0 +1,15 @@
+<h1> Artists </h1>
+
+<div class="albumDiv">
+  {{#each data}}
+  <div>
+    {{#if this.images}}
+    <img src="{{this.images.0.url}}" alt="" class="artist-img">
+    {{else}}
+    <img src="https://demo.tutorialzine.com/2015/03/html5-music-player/assets/img/default.png" alt="" class="artist-img">
+    {{/if}}
+    <br />
+    <a href="/albums/{{this.id}}">{{this.name}}</a>
+  </div>
+  {{/each}}
+</div>
